@@ -1,0 +1,110 @@
+:root {
+    /* 🎨 Paleta principal */
+    --fondo: #FFFFFF;
+    --fondoSecundario: #EAF2F7;
+    --texto: #333333;
+    --encabezados: #2C3E50;
+    --acento: #3BAE9A;
+    --acentoHover: #318575;
+
+    /* ⚙️ Extras */
+    --blanco: #FFFFFF;
+    --grisClaro: #F7F7F7;
+
+    /* ✍️ Tipografía */
+    --fuentePrincipal: "Montserrat", sans-serif;
+    --fuenteTitulos: "Poppins", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--fondo);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    color: var(--texto);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.principal {
+    display: flex;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    flex-direction: row;
+}
+
+h1, h2, h3 {
+    text-align: left;
+    color: var(--encabezados);
+    font-family: var(--fuenteTitulos);
+    margin-bottom: 2rem;
+}
+
+h1 {font-size: 4rem;}
+h2 {font-size: 3.2rem;}
+h3 {font-size: 2.4rem;}
+
+p {
+    font-size: 1.8rem;
+    max-width: 60rem;
+}
+
+/* Navegación */
+.nav {
+    
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+    background-color: var(--fondoSecundario);
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--grisClaro);
+}
+
+.nav__link {
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--encabezados);
+    font-weight: 600;
+}
+
+.nav__link:hover {
+    color: var(--acento);
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--acentoHover);
+}
