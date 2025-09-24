@@ -1,7 +1,7 @@
 :root {
     /* 🎨 Paleta principal */
     --fondo: #FFFFFF;
-    --fondoSecundario: #EAF2F7;
+    --fondoSecundario: #eaeaf7;
     --texto: #333333;
     --encabezados: #2C3E50;
     --acento: #3BAE9A;
@@ -26,7 +26,7 @@ html {
 
 body {
     background-color: var(--fondo);
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.5;
     font-family: var(--fuentePrincipal);
     color: var(--texto);
@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
 }
 
 a {
@@ -48,6 +49,7 @@ img {
 
 .principal {
     display: flex;
+    gap: 8rem;
     max-width: 120rem;
     margin: 0 auto;
     padding: 2rem;
@@ -67,19 +69,20 @@ h2 {font-size: 3.2rem;}
 h3 {font-size: 2.4rem;}
 
 p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     max-width: 60rem;
 }
 
 /* Navegación */
 .nav {
-    
+    margin: 2rem 1rem;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 4rem;
+    padding: 0 1rem;
     background-color: var(--fondoSecundario);
-    padding: 1.5rem;
-    border-bottom: 2px solid var(--grisClaro);
+    border-radius: 5rem;
 }
 
 .nav__link {
@@ -92,6 +95,11 @@ p {
 
 .nav__link:hover {
     color: var(--acento);
+}
+.nav__logo {
+    height: 15rem;
+    margin-right: .5rem;
+    border-radius: 50%;
 }
 
 /* Botones */
@@ -107,4 +115,26 @@ p {
 
 .boton:hover {
     background-color: var(--acentoHover);
+}
+
+.img_ejemplo {
+    background-color: var(--grisClaro);
+    margin-top: 4rem;
+    max-width: 100%;
+    height: 80%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fondoSecundario);
+    text-align: justify;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 10%
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
 }
