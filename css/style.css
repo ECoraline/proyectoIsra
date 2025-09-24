@@ -42,10 +42,7 @@ a {
     transition: all 0.3s ease;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .principal {
     display: flex;
@@ -120,8 +117,8 @@ p {
 .img_ejemplo {
     background-color: var(--grisClaro);
     margin-top: 4rem;
-    max-width: 100%;
-    height: 80%;
+    height: 80rem;
+    width: auto;
 }
 
 .footer {
