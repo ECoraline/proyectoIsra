@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultas</title>
-    <link rel="stylesheet" href="css/contacto.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas</title>
+  <link rel="stylesheet" href="css/contacto.css" />
 
-        <!-- Tipografías -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Krona+One&family=Montserrat:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-
-        <link rel="stylesheet" href="css/contacto.css" />
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Krona+One&family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <nav class="nav">
-            <a class="nav__link" href="index.html">Quienes Somos</a>
-            <a class="nav__link" href="nosotros.html">Misión, Visión y Valores</a>
-            <a class="nav__link" href="Contacto.html">Contacto</a>
-            <!--
-        <a class="nav__link" href="#">Iniciar Sesión</a>
-        <a class="nav__link boton" href="#">Registrarse</a>
-        --></nav>
-        <main class="principal">
-            <section>
-                <h1>Lorem Ipsum</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Consectetur facere laborum illo soluta nobis architecto
-                    voluptatibus optio magni natus voluptatem! Maxime voluptatem
-                    impedit error quas magnam. Tempora nam accusamus veritatis!
-                </p>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="top-info"> 55 5128 1140</div>
+    <div class="top-info"> 55 3023 2264</div>
+    <div class="top-info"> Ezequiel Montes #135, Tabacalera, Cuauhtémoc, CDMX</div>
+    <a href="#" class="btn-cita">CITAS PRIMERA VEZ</a>
+  </div>
 
-                <form>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+ 
+  <nav class="nav">
+    <a class="nav__link" href="index.html">Quienes Somos</a>
+    <a class="nav__link" href="nosotros.html">Misión, Visión y Valores</a>
+    <a class="nav__link" href="Contacto.html">Contacto</a>
+  </nav>
 
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                   
-                </form>
-
-<p>Género:</p>
-                <input type="radio" name="genero" value="femenino"> Femenino<br>
-
-                <input type="radio" name="genero" value="masculino"> Masculino<br>
-
-                <input type="radio" name="genero" value="otro"> Otro<br>
-
-                <button type="submit">Enviar</button>
-
-                
-            </section>
-            <section>
-                <img src="img/12.jpg" alt="" />
-            </section>
-        </main>
+  
+  <main class="principal">
     
+    <section class="contacto">
+      <h2> Dirección</h2>
+      <p>Ezequiel Montes #135, Col. Tabacalera, Cuauhtémoc, CDMX.</p>
+
+      <h2>🕒 Horario de atención</h2>
+      <p>
+        Lunes a Viernes de 7:00 am a 8:00 pm. <br>
+        Sábados de 7:00 am a 1:00 pm.
+      </p>
+      
+
+     
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.4208705311144!2d-98.89958228959406!3d19.26405538190448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce1ececa672d19%3A0x2345b83cf4c825b2!2sUniversidad%20Tres%20Culturas%20%7C%20Chalco%20%7C%20UTC!5e0!3m2!1ses-419!2smx!4v1758753120717!5m2!1ses-419!2smx"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </section>
+
+    
+    <aside class="info-contacto">
+      <p> 55 5128-1140</p>
+      <p> 55 3023-2264</p>
+      <p> contacto@cos.org</p>
+
+      
+      <div class="redes">
+        <a href="#">🌐 Facebook</a>
+        <a href="#">🌐 Twitter</a>
+        <a href="#">🌐 Instagram</a>
+        <a href="#">🌐 YouTube</a>
+      </div>
+    </aside>
+  </main>
 </body>
 </html>
