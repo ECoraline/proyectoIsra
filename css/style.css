@@ -3,13 +3,13 @@
     --fondo: #fcfcfc;
     --fondoSecundario: #eaeaf7;
     --texto: #333333;
-    --encabezados: #2C3E50;
-    --acento: #3BAE9A;
+    --encabezados: #2c3e50;
+    --acento: #3bae9a;
     --acentoHover: #318575;
 
     /* ⚙️ Extras */
-    --blanco: #FFFFFF;
-    --grisClaro: #F7F7F7;
+    --blanco: #ffffff;
+    --grisClaro: #f7f7f7;
 
     /* ✍️ Tipografía */
     --fuentePrincipal: "Montserrat", sans-serif;
@@ -19,9 +19,11 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background-color: var(--fondo);
+    background-color: rgb(237, 239, 240);
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -35,9 +37,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 80%;
+    max-width: 75%;
     margin: 0 auto;
     padding: 0;
+    border-radius: 2rem;
+    border: 2px solid var(--grisClaro);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -51,7 +56,7 @@ a {
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
     background-color: #e7e2f7;
     border-radius: 5rem;
     max-width: 100%;
@@ -85,25 +90,31 @@ a {
     align-items: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: left;
     color: var(--encabezados);
     font-family: var(--fuenteTitulos);
     margin-bottom: 2rem;
 }
 
-h1 {font-size: 4rem;}
-h2 {font-size: 3.2rem;}
-h3 {font-size: 2.4rem;}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
 
 p {
     font-size: 2rem;
     text-align: justify;
-    
 }
 
 /* Navegación */
-
 
 .nav__link {
     font-family: var(--fuentePrincipal);
@@ -118,7 +129,7 @@ p {
 }
 .nav__logo {
     height: 15rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     border-radius: 50%;
 }
 
@@ -142,13 +153,14 @@ p {
     margin-top: 4rem;
     height: 80rem;
     width: auto;
+    border-radius: 2rem;
 }
 
 .footer {
     background-color: #e7e2f7;
     width: 90%;
     text-align: center;
-    border-radius: 3rem 3rem 1rem 1rem ;
+    border-radius: 3rem 3rem 1rem 1rem;
 }
 .footer__texto {
     font-size: 1.4rem;
@@ -207,8 +219,19 @@ p {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .valor {
         padding: 2rem 1.5rem;
     }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    flex-wrap: wrap;
 }
