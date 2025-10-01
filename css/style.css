@@ -29,19 +29,19 @@ html {
 
 body {
     background-color: var(--fondo);
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: var(--fuentePrincipal);
-  color: var(--texto);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 85%;
-  border-radius: 2rem;
-  border: 2px solid var(--grisClaro);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-  overflow: auto;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    color: var(--texto);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 85%;
+    border-radius: 2rem;
+    border: 2px solid var(--grisClaro);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
 a {
@@ -55,10 +55,11 @@ a {
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     background-color: #e7e2f7;
     border-radius: 5rem;
     max-width: 100%;
+    max-height: 13rem;
 }
 
 .principal {
@@ -71,16 +72,23 @@ a {
     flex-direction: row;
 }
 .principal__nosotros {
+    max-width: 120rem;
     display: flex;
     flex-direction: column;
-    margin: 2rem 10rem;
+    margin: 2rem auto;
     text-align: left;
+    
 }
-.principal__contenido {
+
+
+.principal__mision {
+    
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     gap: 4rem;
-    margin-top: 4rem;
+    flex: 2;
+    text-align: justify;
 }
 
 .bienvenida {
@@ -228,9 +236,94 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 20px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
+    padding: 1rem 2rem;
+    background: var(--blanco);
+    border-bottom: 1px solid var(--grisClaro);
+    font-size: 1.6rem;
     flex-wrap: wrap;
+    gap: 4rem;
+}
+.top-info {
+    color: var(--encabezados);
+    font-weight: 600;
+}
+.btn-cita {
+    background: var(--acento);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-cita:hover {
+    background: var(--acentoHover);
+}
+
+.contacto {
+    flex: 2;
+    background: var(--blanco);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.contacto h2 {
+    font-family: var(--fuenteTitulos);
+    font-size: 2.8rem;
+    color: var(--encabezados);
+    margin-bottom: 1.5rem;
+}
+
+.contacto p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.contacto iframe {
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 30rem;
+}
+
+/*  Info contacto */
+.info-contacto {
+    flex: 1;
+    background: var(--fondoSecundario);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    box-shadow: inset 0 0 0.8rem rgba(0, 0, 0, 0.05);
+}
+
+.info-contacto p {
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+/*  Redes sociales */
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.redes a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--encabezados);
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+.redes a:hover {
+    color: var(--acento);
+}
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
