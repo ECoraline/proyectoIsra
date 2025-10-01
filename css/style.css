@@ -29,20 +29,19 @@ html {
 
 body {
     background-color: var(--fondo);
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: var(--fuentePrincipal);
-    color: var(--texto);
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 75%;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 2rem;
-    border: 2px solid var(--grisClaro);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--fuentePrincipal);
+  color: var(--texto);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+  border-radius: 2rem;
+  border: 2px solid var(--grisClaro);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: auto;
 }
 
 a {
