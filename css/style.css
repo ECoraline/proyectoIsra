@@ -320,10 +320,4 @@ p {
 .redes a:hover {
     color: var(--acento);
 }
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-    .principal {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
+
