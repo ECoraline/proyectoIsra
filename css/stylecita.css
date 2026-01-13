@@ -1,0 +1,104 @@
+/* Configuración de fondo y tarjeta */
+body {
+    background-color: #f0f2f5; /* Fondo grisáceo contrastado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+#main-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: none;
+    max-width: 1100px;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Layout Responsivo */
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 992px) {
+    .booking-container {
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+}
+
+/* Estilos del Calendario */
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-nav h5 {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.calendar-nav button {
+    width: auto;
+    padding: 0.2rem 0.8rem;
+    margin: 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.day-name {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--pico-muted-color);
+    padding-bottom: 10px;
+}
+
+.calendar-day {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.calendar-day:hover:not(.disabled) {
+    background-color: var(--pico-primary-hover);
+    color: white;
+}
+
+.calendar-day.selected {
+    background-color: var(--pico-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Botones de Horas */
+.time-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.time-slots button {
+    margin-bottom: 0;
+}

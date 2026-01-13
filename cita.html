@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas - Israel Suárez</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="css/stylecita.css">
+</head>
+<body>
+
+<main class="container">
+    <article id="main-card">
+        <div class="booking-container">
+            
+            <section class="info-section">
+                <hgroup>
+                    <h2>Israel Suárez Alvarez</h2>
+                    <p>Consulta Terapéutica</p>
+                </hgroup>
+                <div class="details">
+                    <p>⏱ 55 min</p>
+                    <p class="description">
+                        Soy el psicólogo Israel Suárez Álvarez. El pago se efectúa el día de la consulta (efectivo o transferencia).
+                    </p>
+                </div>
+            </section>
+
+            <section class="calendar-section">
+                <div class="calendar-nav">
+                    <button class="outline secondary" onclick="changeMonth(-1)"> &lt; </button>
+                    <h5 id="month-display"></h5>
+                    <button class="outline secondary" onclick="changeMonth(1)"> &gt; </button>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="day-name">DOM</div><div class="day-name">LUN</div>
+                    <div class="day-name">MAR</div><div class="day-name">MIÉ</div>
+                    <div class="day-name">JUE</div><div class="day-name">VIE</div>
+                    <div class="day-name">SÁB</div>
+                </div>
+                <div id="calendar-body" class="calendar-grid"></div>
+            </section>
+
+            <section id="time-selection" style="display: none;">
+                <h5>Horas disponibles</h5>
+                <div class="time-slots" id="slots-container">
+                    </div>
+            </section>
+
+        </div>
+    </article>
+</main>
+
+<script src="javaScript/calendario.js"></script>
+</body>
+</html>
