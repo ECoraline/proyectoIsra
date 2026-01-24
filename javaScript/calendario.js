@@ -63,9 +63,55 @@ function changeMonth(diff) {
     document.getElementById('time-selection').style.display = 'none';
 }
 
-function confirmar(hora) {
-    const mes = document.getElementById('month-display').innerText;
-    alert(`Cita solicitada:\nFecha: ${selectedDate} de ${mes}\nHora: ${hora}\n\nConectando con n8n...`);
+async function confirmar(hora) {
+    const nombre = document.getElementById('paciente-nombre').value;
+    const email = document.getElementById('paciente-email').value;
+
+    if (!nombre || !email || !selectedDate) {
+        alert("Por favor, completa todos los datos.");
+        return;
+    }
+
+    // --- LÓGICA PARA FORMATO DE GOOGLE ---
+    const año = currentDocDate.getFullYear();
+    const mes = currentDocDate.getMonth(); // Enero es 0, Febrero es 1...
+    
+    // Convertir "12:00pm" o "4:00pm" a formato 24h
+    let [tiempo, meridiano] = hora.split(/(am|pm)/i);
+    let [horas, minutos] = tiempo.split(':');
+    horas = parseInt(horas);
+    
+    if (meridiano.toLowerCase() === 'pm' && horas < 12) horas += 12;
+    if (meridiano.toLowerCase() === 'am' && horas === 12) horas = 0;
+
+    // 1. Crear fecha de inicio
+    const fechaInicio = new Date(año, mes, selectedDate, horas, parseInt(minutos));
+    
+    // 2. Crear fecha de fin (sumamos 55 minutos)
+    const fechaFin = new Date(fechaInicio.getTime() + 55 * 60000);
+
+    const datosCita = {
+        paciente: nombre,
+        email: email,
+        inicio: fechaInicio.toISOString(), // Ejemplo: "2026-01-22T12:00:00.000Z"
+        fin: fechaFin.toISOString()
+    };
+
+    const url = 'https://n8n.israelsuarez.com/webhook/cita-israel';
+
+    try {
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(datosCita)
+        });
+        
+        if (res.ok) {
+            alert("¡Cita agendada! Revisa tu correo para la invitación.");
+        }
+    } catch (e) {
+        alert("Error de conexión con el servidor.");
+    }
 }
 
 // Primera carga

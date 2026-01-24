@@ -43,7 +43,14 @@
             </section>
 
             <section id="time-selection" style="display: none;">
-                <h5>Horas disponibles</h5>
+                <hr>
+                <h5>Datos del paciente</h5>
+                <div class="grid">
+                    <input type="text" id="paciente-nombre" placeholder="Nombre completo" required>
+                    <input type="email" id="paciente-email" placeholder="Correo electrónico" required>
+                </div>
+
+                <h5>Selecciona una hora para confirmar</h5>
                 <div class="time-slots" id="slots-container">
                     </div>
             </section>
@@ -52,6 +59,6 @@
     </article>
 </main>
 
-<script src="javaScript/calendario.js"></script>
+<script src="javaScript/calendario.js?v=1.5"></script>
 </body>
 </html>
